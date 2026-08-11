@@ -1,6 +1,8 @@
 import json
+import os
 import shutil
 import sys
+import tempfile
 import uuid
 from contextlib import contextmanager
 from pathlib import Path
@@ -110,7 +112,12 @@ def _raises(expected_exception):
 
 @contextmanager
 def _workspace_temporary_directory():
-    """Use inherited workspace ACLs instead of tempfile's Windows 0o700 ACL."""
+    """Use a local temp filesystem on POSIX and inherited ACLs on Windows."""
+
+    if os.name != "nt":
+        with tempfile.TemporaryDirectory(prefix="aio3_manifest_tests_") as path:
+            yield path
+        return
 
     parent = REPOSITORY_ROOT / ".tmp_aio3_manifest_tests"
     parent.mkdir(exist_ok=True)
