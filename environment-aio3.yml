@@ -11,7 +11,8 @@ dependencies:
   - pytorch-cuda=12.4
   - pip
   - pytest>=7.0.0
+  - conda-forge::einops>=0.7.0
+  - conda-forge::pillow>=9.0.0
   - pip:
-      - einops>=0.7.0
-      - pillow>=9.0.0
+      - --index-url https://pypi.org/simple
       - wandb==0.25.1

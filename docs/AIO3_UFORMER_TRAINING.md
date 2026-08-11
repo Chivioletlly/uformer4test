@@ -35,7 +35,20 @@ python -c "import torch, torchvision, einops, wandb; print(torch.__version__, to
 ```
 
 If `uformer-aio3` already exists, activate it instead of recreating it.  The
-required W&B version is exactly `0.25.1`.
+required W&B version is exactly `0.25.1`.  Einops and Pillow are installed by
+conda-forge.  W&B 0.25.1 still supports Python 3.9 but conda-forge no longer
+publishes a Python 3.9 build, so the environment file installs only that package
+from the primary PyPI index explicitly; this bypasses any stale system-wide pip
+mirror configuration.
+
+If a previous `conda env create` reached the pip stage and then failed, the
+environment may already exist.  After pulling the corrected environment file,
+finish that dedicated environment with:
+
+```bash
+conda env update -n uformer-aio3 -f environment-aio3.yml --prune
+conda activate uformer-aio3
+```
 
 ## 3. Verify the frozen manifests
 
