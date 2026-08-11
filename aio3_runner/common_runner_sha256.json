@@ -1,0 +1,17 @@
+{
+  "reference_commit": "6a2c14f92770506fe3b2558ec4072037189b1ea9",
+  "reference_repository": "https://github.com/Chivioletlly/DCNv4fortest",
+  "sha256": {
+    "aio3_runner/__init__.py": "f3d58090e970b85aae5256a653cb056e089c287f1ce70050c6295b948113c60f",
+    "aio3_runner/checkpoint.py": "34183718828388675831d5db173ca96fe428dc76b919158d131e23648a40efdd",
+    "aio3_runner/data.py": "00d17735e6eff0042598c9b82a78410b4a2f15e32f30cc2bba50555a7014ea1b",
+    "aio3_runner/evaluation.py": "2988316639b2a9a7c25aad3edbbf9e884c04bbd593dbdbadda2dcff2660f982e",
+    "aio3_runner/manifests.py": "8727fd51777846b54103694f22d0cf5429cfb9c49300676775c3a2110a8cf844",
+    "aio3_runner/metrics.py": "8c67cf67d8a801ffc9b9259407c99a72ae6f59b488c6d1fea3244d252b50a2c7",
+    "aio3_runner/prepare_data.py": "34f6b03f4206b54cc021c396e4b8a7152592fd11788ee135966eeb15598c71a3",
+    "aio3_runner/protocol.py": "660ae792e2a2aafdf59c6f156f3b980c23d22a01da231a71aebb16b2a76385c2",
+    "aio3_runner/schedule.py": "6dd6948737e70cbcdd07711ee13e7c45fdf91a43cef0e9e734ceeea857fba525",
+    "aio3_runner/validation.py": "c3a246b87bb91b482f24df62fa3263df12e04fa4e4a43f53efe128558b385a31",
+    "aio3_runner/wandb_check.py": "e43b998b77bce125a13168a2baedf767c06e04a82b16cf19ff3de29431280a73"
+  }
+}

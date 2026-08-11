@@ -136,3 +136,9 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# AIO3-v1 runtime artifacts (must stay outside the source repository)
+wandb/
+outputs/
+checkpoints/
+.tmp_aio3_*_tests/

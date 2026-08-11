@@ -1,0 +1,17 @@
+name: uformer-aio3
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pytorch=2.5.1
+  - torchvision=0.20.1
+  - pytorch-cuda=12.4
+  - pip
+  - pytest>=7.0.0
+  - pip:
+      - einops>=0.7.0
+      - pillow>=9.0.0
+      - wandb==0.25.1

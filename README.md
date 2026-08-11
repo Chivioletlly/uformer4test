@@ -9,6 +9,20 @@
 
 Paper link: [[Arxiv]](https://arxiv.org/abs/2106.03106) [[CVPR]](https://openaccess.thecvf.com/content/CVPR2022/papers/Wang_Uformer_A_General_U-Shaped_Transformer_for_Image_Restoration_CVPR_2022_paper.pdf)
 
+## AIO3-v1 Uformer-B comparison baseline
+
+This fork adds a frozen AIO3-v1 adapter and runner for a fair comparison with
+the DCNv4 U-Net baseline. It uses the official `Uformer_B` architecture with
+random initialization, 50,880,946 trainable parameters, BF16 autocast, and no
+pretrained weights, EMA, TTA, perceptual loss, or prediction clamp before the
+pixel L1 loss. The common data, sampling, noise, schedule, metric, validation,
+and formal-test modules are hash-locked to the reference runner commit.
+
+See [`docs/AIO3_UFORMER_TRAINING.md`](docs/AIO3_UFORMER_TRAINING.md) for the
+server-side smoke, resume, pilot, formal training, and evaluation commands. The
+runner provenance is documented in
+[`docs/AIO3_RUNNER_PROVENANCE.md`](docs/AIO3_RUNNER_PROVENANCE.md).
+
 
 ### Update:
 * **2024.10.24** Fix expired links.
